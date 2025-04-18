@@ -10,7 +10,4 @@ pipeline {
 
         
     }
-    triggers {
-    pollSCM('* * * * *')
-}
 }
