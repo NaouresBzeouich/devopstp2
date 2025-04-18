@@ -4,6 +4,12 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
+                echo "hello word ! "
+            }
+        }
+
+        stage('comit details') {
+            steps {
                 echo "🧬 Branch: ${env.GIT_BRANCH}"
                 echo "🔁 Commit ID: ${env.GIT_COMMIT}"
                 echo "📂 Repo: ${env.GIT_URL}"
