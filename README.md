@@ -10,13 +10,9 @@
  
  Gharssallah Hatem 
 
- ## testing 
- 123
-
-### testing 
-
-hola 1 2 3 et 4
-
+# features ; 
+this repo is just for testing some function on the jinkins , github actions , Terraforms , etc 
+for just practising devops and learning it 
 
 
 
