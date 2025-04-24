@@ -1,0 +1,29 @@
+name: Send Email on Push
+
+on:
+  push:
+    branches:
+      - main  
+
+jobs:
+  send_email:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Send email
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com  # or your SMTP server
+          server_port: 465
+          username: ${{ secrets.SMTP_USERNAME }}
+          password: ${{ secrets.SMTP_PASSWORD }}
+          subject: "🚀 New Push Detected on GitHub Repo"
+          to: omar.mejdi@insat.ucar.tn
+          from: naoures.bzeouich@insat.ucar.tn
+          content_type: text/html
+          body: |
+            <h2>New push event </h2>
+            <p>Someone just pushed to the repo. Check the latest changes on <a href="https://github.com/NaouresBzeouich/devopstp2/">GitHub</a>.</p>
